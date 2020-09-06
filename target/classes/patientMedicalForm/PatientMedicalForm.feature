@@ -1,6 +1,6 @@
 @patientMedicalForm
 Feature: Fill the form - PatientMedical
-  I want to fill the form
+  I want to fill in the patient from
 
   @form
   Scenario: Fill the form - PatientMedical

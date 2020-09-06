@@ -32,19 +32,19 @@ public class FormStepDef extends CommonMethods {
 	public void setFirstName() throws Throwable {
 		
 		PageFactory.initElements(driver, FormStepDef.class);
-		formPage.SendUserFirstName();
+		formPage.sendFirstName();
 	}
 
 	@When("^set last name$")
 	public void setLastName() throws Throwable {
-		formPage.SendUserLastName();
+		formPage.sendLastName();
 	}
 
 	@When("^click submit button$")
-	public void clickSubmitButton() throws Throwable {
+	public void submitForm() throws Throwable {
 
 		CommonMethods.scrollerBottom();
-		formPage.clickSubmitButton();
+		formPage.submitForm();
 	}
 
 }

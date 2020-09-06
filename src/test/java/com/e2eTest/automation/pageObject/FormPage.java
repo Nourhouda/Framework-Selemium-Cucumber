@@ -8,38 +8,43 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FormPage {
 
-	WebDriver driver;
-
+WebDriver driver ;
+	
 	public FormPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	final static String FIRST_NAME_ID = "first_45";
+	final static String LAST_NAME_ID = "last_45";
+	final static String SUBMIT_XPATH = "//button[@id='input_14']";
+	
+	/* @FindBy */
 
-	final static String USER_FIRSTNAME_ID  = "first_45";
-	final static String USER_LASTNAME_ID  = "last_45";
-	final static String BUTTON_SUBMIT_XPATH = "//button[@id='input_14']";
+	@FindBy(how = How.ID, using = FIRST_NAME_ID)
+	public static WebElement firstName;
+	@FindBy(how = How.ID, using = LAST_NAME_ID)
+	public static WebElement lastName;
+	@FindBy(how = How.XPATH, using = SUBMIT_XPATH)
+	public static WebElement submit;
 	
-	/* @FindBy*/
-	@FindBy(how=How.ID , using = USER_FIRSTNAME_ID)
-	public static WebElement userFirstName;
-	@FindBy(how=How.ID , using = USER_LASTNAME_ID)
-	public static WebElement userLastName;
-	@FindBy(how=How.XPATH, using = BUTTON_SUBMIT_XPATH)
-	public static WebElement btnSubmit;
-	
-	/* @Methods*/
-	public void SendUserFirstName() {
-		
-		userFirstName.sendKeys("Nour");
+	/* Methods */
+
+	public void sendFirstName() {
+		firstName.sendKeys("blablabla");
 	}
-	
-	public void SendUserLastName() {
-		
-		userLastName.sendKeys("JLASSI");
+
+	public void sendLastName() {
+		lastName.sendKeys("blablabla");
 	}
-	
-	public void clickSubmitButton() {
-		btnSubmit.click();
+
+	public void submitForm() {
+		submit.click();
 	}
+
+	
+	
+	
+	
 	
 }

@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 9816468900,
+  "duration": 9195422700,
   "status": "passed"
 });
 formatter.scenario({
@@ -59,39 +59,39 @@ formatter.match({
   "location": "AuthentificationStepDef.openApplication()"
 });
 formatter.result({
-  "duration": 3605693300,
+  "duration": 3107294200,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthentificationStepDef.setUsername()"
 });
 formatter.result({
-  "duration": 97414300,
+  "duration": 67220600,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthentificationStepDef.setPassword()"
 });
 formatter.result({
-  "duration": 73164000,
+  "duration": 59149500,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthentificationStepDef.clickNloginButton()"
 });
 formatter.result({
-  "duration": 4091278700,
+  "duration": 5312826600,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthentificationStepDef.showPageAdmin()"
 });
 formatter.result({
-  "duration": 39262400,
+  "duration": 34550400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1357842000,
+  "duration": 1335379000,
   "status": "passed"
 });
 formatter.uri("patientMedicalForm/PatientMedicalForm.feature");
@@ -109,7 +109,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 8355957000,
+  "duration": 8357933500,
   "status": "passed"
 });
 formatter.scenario({
@@ -150,15 +150,15 @@ formatter.match({
   "location": "FormStepDef.openApplicationMedical()"
 });
 formatter.result({
-  "duration": 1845581200,
+  "duration": 2599318100,
   "status": "passed"
 });
 formatter.match({
   "location": "FormStepDef.setFirstName()"
 });
 formatter.result({
-  "duration": 3363100,
-  "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy16.sendKeys(Unknown Source)\r\n\tat com.e2eTest.automation.pageObject.FormPage.SendUserFirstName(FormPage.java:33)\r\n\tat com.e2eTest.automation.stepDefinition.FormStepDef.setFirstName(FormStepDef.java:35)\r\n\tat ✽.When set first name(patientMedicalForm/PatientMedicalForm.feature:8)\r\n",
+  "duration": 670200,
+  "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy16.sendKeys(Unknown Source)\r\n\tat com.e2eTest.automation.pageObject.FormPage.sendFirstName(FormPage.java:34)\r\n\tat com.e2eTest.automation.stepDefinition.FormStepDef.setFirstName(FormStepDef.java:35)\r\n\tat ✽.When set first name(patientMedicalForm/PatientMedicalForm.feature:8)\r\n",
   "status": "failed"
 });
 formatter.match({
@@ -168,7 +168,7 @@ formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "FormStepDef.clickSubmitButton()"
+  "location": "FormStepDef.submitForm()"
 });
 formatter.result({
   "status": "skipped"
@@ -176,7 +176,7 @@ formatter.result({
 formatter.write("current page url is :https://form.jotform.com/81665408084158");
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 1676838300,
+  "duration": 1600434900,
   "status": "passed"
 });
 });
