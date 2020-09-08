@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.e2eTest.automation.pageObject.AuthentificationPage;
+import com.e2eTest.automation.util.CommonMethods;
 import com.e2eTest.automation.util.Setup;
 
 import cucumber.api.java.en.And;
@@ -12,7 +13,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class AuthentificationStepDef {
+public class AuthentificationStepDef extends CommonMethods {
 
 	public WebDriver driver;
 	private AuthentificationPage authentificationPage=new AuthentificationPage(driver);
@@ -42,17 +43,29 @@ public class AuthentificationStepDef {
 			authentificationPage.sendUserPassword();
 		}
 
-		@And("^click nlogin button$")
-		public void clickNloginButton() throws Throwable {
+		@And("^click Login button$")
+		public void clickLoginButton() throws Throwable {
 
 			authentificationPage.clickLoginButton();
 		}
 
-		@Then("^show page admin$")
+		@Then("^show page Admin$")
 		public void showPageAdmin() throws Throwable {
 
 			String wlc=AuthentificationPage.welcome.getText();
 			Assert.assertTrue(wlc.contains("Welcome"));
+		}
+		
+		@When("^click on Admin$")
+		public void clickOnAdmin() throws Throwable {
+			
+			authentificationPage.clickLinkAdmin();
+		}
+
+		@When("^click on Buzz$")
+		public void clickOnBuzz() throws Throwable {
+			
+			authentificationPage.clickLinkBuzz();
 		}
 
 }

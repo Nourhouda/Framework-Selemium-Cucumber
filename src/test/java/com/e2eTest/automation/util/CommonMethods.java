@@ -1,15 +1,18 @@
 package com.e2eTest.automation.util;
 
+import java.util.Properties;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CommonMethods {
+public class CommonMethods  {
 
 	public static WebDriver driver;
+	public static Properties prop;
 	
-	public CommonMethods() {
+	public CommonMethods()  {
 
 		driver=Setup.driver;
 	}
@@ -55,4 +58,12 @@ public class CommonMethods {
 		driver.navigate().forward();
 
 	}
+	
+	//public void readFile() throws IOException {
+		
+		//prop= new Properties();
+		//FileInputStream fis= new FileInputStream("src/test/ressources/configs/config.properties");
+		//prop.load(fis);
+	//}
+	
 }

@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = { "src/specs/features" },
 		// glue = {""},
 		plugin = { "pretty", "html:target/cucmber-htm-report" }, snippets = SnippetType.CAMELCASE,
-		tags = { ("@authentification, @patientMedicalForm") }, monochrome = true)
+		tags = { ("@authentification") }, monochrome = true)
 
 public class TestRunner {
 

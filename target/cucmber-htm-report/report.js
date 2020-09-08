@@ -2,7 +2,7 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "line": 2,
   "name": "Authentification - OrangeHRM",
-  "description": "ETQ user je souhaite faire m\u0027authentifer",
+  "description": "ETQ user je souhaite m\u0027authentifier",
   "id": "authentification---orangehrm",
   "keyword": "Feature",
   "tags": [
@@ -13,11 +13,66 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 9195422700,
+  "duration": 8079940000,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "open application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "set username",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 8,
+  "name": "set password",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "click Login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "AuthentificationStepDef.openApplication()"
+});
+formatter.result({
+  "duration": 2739903900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AuthentificationStepDef.setUsername()"
+});
+formatter.result({
+  "duration": 64334900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AuthentificationStepDef.setPassword()"
+});
+formatter.result({
+  "duration": 61172700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "AuthentificationStepDef.clickLoginButton()"
+});
+formatter.result({
+  "duration": 2622973600,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 6,
+  "line": 12,
   "name": "Authentification - OrangeHRM",
   "description": "",
   "id": "authentification---orangehrm;authentification---orangehrm",
@@ -25,158 +80,203 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 5,
+      "line": 11,
       "name": "@auth"
     }
   ]
 });
 formatter.step({
-  "line": 7,
+  "line": 13,
+  "name": "show page Admin",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "AuthentificationStepDef.showPageAdmin()"
+});
+formatter.result({
+  "duration": 949158700,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1317407400,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 8282152200,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
   "name": "open application",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 8,
+  "line": 7,
   "name": "set username",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
+  "line": 8,
   "name": "set password",
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
-  "name": "click nlogin button",
+  "line": 9,
+  "name": "click Login button",
   "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "show page admin",
-  "keyword": "Then "
 });
 formatter.match({
   "location": "AuthentificationStepDef.openApplication()"
 });
 formatter.result({
-  "duration": 3107294200,
+  "duration": 1964851900,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthentificationStepDef.setUsername()"
 });
 formatter.result({
-  "duration": 67220600,
+  "duration": 79975900,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthentificationStepDef.setPassword()"
 });
 formatter.result({
-  "duration": 59149500,
+  "duration": 68950800,
   "status": "passed"
 });
 formatter.match({
-  "location": "AuthentificationStepDef.clickNloginButton()"
+  "location": "AuthentificationStepDef.clickLoginButton()"
 });
 formatter.result({
-  "duration": 5312826600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AuthentificationStepDef.showPageAdmin()"
-});
-formatter.result({
-  "duration": 34550400,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 1335379000,
-  "status": "passed"
-});
-formatter.uri("patientMedicalForm/PatientMedicalForm.feature");
-formatter.feature({
-  "line": 2,
-  "name": "Fill the form - PatientMedical",
-  "description": "I want to fill the form",
-  "id": "fill-the-form---patientmedical",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@patientMedicalForm"
-    }
-  ]
-});
-formatter.before({
-  "duration": 8357933500,
+  "duration": 2442973200,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 6,
-  "name": "Fill the form - PatientMedical",
+  "line": 16,
+  "name": "Click-Admin",
   "description": "",
-  "id": "fill-the-form---patientmedical;fill-the-form---patientmedical",
+  "id": "authentification---orangehrm;click-admin",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 5,
-      "name": "@form"
+      "line": 15,
+      "name": "@linkAdmin"
     }
   ]
 });
 formatter.step({
-  "line": 7,
-  "name": "open application medical",
+  "line": 17,
+  "name": "click on Admin",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "AuthentificationStepDef.clickOnAdmin()"
+});
+formatter.result({
+  "duration": 903019000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1922517700,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 8458090900,
+  "status": "passed"
+});
+formatter.background({
+  "line": 5,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 6,
+  "name": "open application",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 8,
-  "name": "set first name",
+  "line": 7,
+  "name": "set username",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "set last name",
+  "line": 8,
+  "name": "set password",
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
-  "name": "click submit button",
+  "line": 9,
+  "name": "click Login button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "FormStepDef.openApplicationMedical()"
+  "location": "AuthentificationStepDef.openApplication()"
 });
 formatter.result({
-  "duration": 2599318100,
+  "duration": 2099782400,
   "status": "passed"
 });
 formatter.match({
-  "location": "FormStepDef.setFirstName()"
+  "location": "AuthentificationStepDef.setUsername()"
 });
 formatter.result({
-  "duration": 670200,
-  "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy16.sendKeys(Unknown Source)\r\n\tat com.e2eTest.automation.pageObject.FormPage.sendFirstName(FormPage.java:34)\r\n\tat com.e2eTest.automation.stepDefinition.FormStepDef.setFirstName(FormStepDef.java:35)\r\n\tat ✽.When set first name(patientMedicalForm/PatientMedicalForm.feature:8)\r\n",
-  "status": "failed"
+  "duration": 76856800,
+  "status": "passed"
 });
 formatter.match({
-  "location": "FormStepDef.setLastName()"
+  "location": "AuthentificationStepDef.setPassword()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 65484500,
+  "status": "passed"
 });
 formatter.match({
-  "location": "FormStepDef.submitForm()"
+  "location": "AuthentificationStepDef.clickLoginButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 3229472400,
+  "status": "passed"
 });
-formatter.write("current page url is :https://form.jotform.com/81665408084158");
-formatter.embedding("image/png", "embedded0.png");
+formatter.scenario({
+  "line": 20,
+  "name": "Click-Buzz",
+  "description": "",
+  "id": "authentification---orangehrm;click-buzz",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 19,
+      "name": "@linkBuzz"
+    }
+  ]
+});
+formatter.step({
+  "line": 21,
+  "name": "click on Buzz",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "AuthentificationStepDef.clickOnBuzz()"
+});
+formatter.result({
+  "duration": 64859600,
+  "status": "passed"
+});
 formatter.after({
-  "duration": 1600434900,
+  "duration": 1290232900,
   "status": "passed"
 });
 });

@@ -20,6 +20,9 @@ public class AuthentificationPage {
 	final static String BUTTON_LOGIN_ID = "btnLogin";
 	final static String WELCOME_ID = "welcome";
 	
+	final static String ADMIN_LINK = "welcome";
+	final static String BUZZ_LINK = "welcome";
+	
 	/* @FindBy*/
 	@FindBy(how=How.ID, using = USER_NAME_ID)
 	public static WebElement userName;
@@ -29,6 +32,12 @@ public class AuthentificationPage {
 	public static WebElement btnLogin;
 	@FindBy(how=How.ID, using = WELCOME_ID)
 	public static WebElement welcome;
+	
+
+	@FindBy(how=How.ID, using = ADMIN_LINK)
+	public static WebElement LinkAdmin;
+	@FindBy(how=How.ID, using = BUZZ_LINK)
+	public static WebElement LinkBuzz;
 	
 	/* @Methods*/
 	public void sendUserName() {
@@ -42,7 +51,17 @@ public class AuthentificationPage {
 	}
 	
 	public void clickLoginButton() {
+		
 		btnLogin.click();
+	}
+	
+	public void clickLinkAdmin() {
+		
+		LinkAdmin.click();
+	}
+	public void clickLinkBuzz() {
+		
+		LinkBuzz.click();
 	}
 
 }

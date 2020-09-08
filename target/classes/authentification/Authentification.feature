@@ -1,11 +1,21 @@
 @authentification
 Feature: Authentification - OrangeHRM
-  ETQ user je souhaite faire m'authentifer
+  ETQ user je souhaite m'authentifier
 
-  @auth
-  Scenario: Authentification - OrangeHRM
+  Background: 
     Given open application
     When set username
     And set password
-    And click nlogin button
-    Then show page admin
+    And click Login button
+
+  @auth
+  Scenario: Authentification - OrangeHRM
+    Then show page Admin
+
+  @linkAdmin
+  Scenario: Click-Admin
+    When click on Admin
+
+  @linkBuzz
+  Scenario: Click-Buzz
+    When click on Buzz
