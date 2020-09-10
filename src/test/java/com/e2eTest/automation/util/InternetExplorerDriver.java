@@ -5,7 +5,7 @@ public class InternetExplorerDriver extends DriverManager {
 	@Override
 	protected void startService() {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.ie.driver","src/test/resources/BrowserDriver/IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver","path/IEDriverServer.exe");
 	
 	}
 

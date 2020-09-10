@@ -1,5 +1,7 @@
 package com.e2eTest.automation.util;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,51 +21,47 @@ public class CommonMethods  {
 	
 	protected static final Logger logger = LoggerFactory.getLogger(AbstractPage.class);
 	
+	// Scroll
 	public static void scrollerBottom() {
 
-		// Scroll
 		for (int second = 0;; second++) {
 			if (second >= 60) {
 				break;
 			}
 			((JavascriptExecutor) driver).executeScript("window.scrollBy(0,400)", "");
 		}
-
 	}
 
 	public void scorllerTop () {
 		
 		JavascriptExecutor javascriptExecutor = (JavascriptExecutor)driver;
 		javascriptExecutor.executeScript("window.scrollTo("+0+","+0+")", "");
-		
 	}
 	
+	// Refresh
 	public void refreshBrowser() {
 
-		// Refresh
 		driver.navigate().refresh();
-
 	}
 
+	// Back
 	public void goBack() {
 
-		// Back
 		driver.navigate().back();
-
 	}
 
+	// Forward
 	public void forword() {
 
-		// Forward
 		driver.navigate().forward();
-
 	}
 	
-	//public void readFile() throws IOException {
+	public static void openBrowserWithConfigFile(String url) throws IOException {
 		
-		//prop= new Properties();
-		//FileInputStream fis= new FileInputStream("src/test/ressources/configs/config.properties");
-		//prop.load(fis);
-	//}
+		prop= new Properties();
+		FileInputStream fis= new FileInputStream("src/test/resources/configs/config.properties");
+		prop.load(fis);
+		driver.get(prop.getProperty(url));
+	}
 	
 }

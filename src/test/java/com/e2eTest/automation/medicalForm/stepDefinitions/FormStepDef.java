@@ -1,9 +1,9 @@
-package com.e2eTest.automation.stepDefinition;
+package com.e2eTest.automation.medicalForm.stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.e2eTest.automation.pageObject.FormPage;
+import com.e2eTest.automation.medicalForm.pageObjects.FormPage;
 import com.e2eTest.automation.util.CommonMethods;
 import com.e2eTest.automation.util.Setup;
 
@@ -13,24 +13,22 @@ import cucumber.api.java.en.When;
 public class FormStepDef extends CommonMethods {
 
 	public WebDriver driver;
-	private FormPage formPage=new FormPage(driver);
-	//private CommonMethods commonMethods=new CommonMethods();
-	
+	private FormPage formPage = new FormPage(driver);
+
 	public FormStepDef() {
-		
-		driver=Setup.driver;
+
+		driver = Setup.driver;
 	}
 
 	@Given("^open application medical$")
 	public void openApplicationMedical() throws Throwable {
-		
-		String url="https://form.jotform.com/81665408084158";
-		driver.get(url);
+
+		CommonMethods.openBrowserWithConfigFile("url2");
 	}
-	
+
 	@When("^set first name$")
 	public void setFirstName() throws Throwable {
-		
+
 		PageFactory.initElements(driver, FormStepDef.class);
 		formPage.sendFirstName();
 	}

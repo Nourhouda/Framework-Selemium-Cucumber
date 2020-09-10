@@ -14,10 +14,10 @@ public class Setup {
 	public static WebDriver driver;
 	static DriverManager driverManger;
 
-	@Before
 	/**
-	 * Call browser with the designe pattern factory navigater
+	 * Call browser with the design pattern factory navigator
 	 */
+	@Before
 	public static void setup() {
 
 		driverManger = DriverManagerFactory.getManager(DriverType.CHROME);
@@ -25,7 +25,7 @@ public class Setup {
 	}
 
 	/**
-	 * Embaded a screendhot in test report if test is marker as failed
+	 * Embedded a screenshot in test report if test is marker as failed
 	 * 
 	 * @param scenario
 	 */
